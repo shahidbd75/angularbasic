@@ -1,3 +1,4 @@
 <h1>Angular</h1>
 <courses></courses>
-<favourite [isFavourite]="pop.isFavourite"></favourite>
+
+<favourite [isFavourite]="pop.isFavourite" (change)="onFavouriteChanged($event)"></favourite>
