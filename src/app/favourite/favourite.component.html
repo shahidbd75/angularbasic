@@ -1,7 +1,6 @@
-<p (click)="onClick()">
-  favourite works!<br/>
-
-</p>
-
+<span (click)="onClick()"
+class="glyphicon "
+[class.glyphicon-star]="isFavourite"
+[class.glyphicon-star-empty]="!isFavourite"></span>
 
 <p ngModule="isFavourite">{{isFavourite}}</p>
