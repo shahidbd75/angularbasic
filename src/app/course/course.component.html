@@ -1,3 +1,32 @@
-<p>
-  course works!
-</p>
+<!-- <div *ngIf="courseCategory.length>0">
+  List of Course Category
+</div>
+<div *ngIf="courseCategory.length==0">
+  No Category Yet
+</div> -->
+
+
+<div *ngIf="courseCategory.length>0;then listOfCategory else emptyCategory" class="lead">
+
+</div>
+
+<ng-template #listOfCategory>
+    List of Course Category
+</ng-template>
+<ng-template #emptyCategory>
+    No Category Yet
+</ng-template>
+
+<br/>
+
+<div [hidden]="courseCategory.length==0">
+  Number Of Category available : {{courseCategory.length}}
+</div>
+<div [hidden]="courseCategory.length>0">
+    Category Not Available
+</div>
+
+<br/>
+<ul>
+  <li *ngFor="let cc of courseCategory; even as isEven">{{cc.id}}-{{cc.name}} == {{isEven}}</li>
+</ul>

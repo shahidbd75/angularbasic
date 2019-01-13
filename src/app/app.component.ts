@@ -10,7 +10,11 @@ export class AppComponent {
   title = 'hello-world';
   pop={isFavourite:true,isTaken:false};
 
+  viewMode: string ="other";
+
+  
+
   onFavouriteChanged(eventArgs:favouriteEventArgs){
-    console.log('favourite changed successfully' + eventArgs.newValue);
+    console.log('favourite changed successfully. ' + eventArgs.newValue);
   }
 }
