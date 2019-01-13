@@ -3,4 +3,8 @@ class="glyphicon "
 [class.glyphicon-star]="isFavourite"
 [class.glyphicon-star-empty]="!isFavourite"></span>
 
+<!-- <span (click)="onClick()"
+[(ngModel)]="isFavourite">Click Me {{isFavourite}}</span> -->
+<button (click)="onClick()" class="btn btn-primary">Click Me</button>
+
 <p ngModule="isFavourite">{{isFavourite}}</p>
