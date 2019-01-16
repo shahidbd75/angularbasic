@@ -27,6 +27,22 @@
 </div>
 
 <br/>
+<button class="btn btn-success" (click)="loadCourses()">Load Category</button>
 <ul>
-  <li *ngFor="let cc of courseCategory; even as isEven">{{cc.id}}-{{cc.name}} == {{isEven}}</li>
+  <li *ngFor="let cc of courseCategory; trackBy: trackCategory"> <!--even as isEven-->
+    {{cc.id}}-{{cc.name}}
+  </li>
 </ul>
+
+<hr/>
+<div *ngIf="courseCategory.length>0; else noCategory" class="lead">
+  Course Category List
+</div>
+  
+  <ng-template [ngIf]="courseCategory.length>0">
+      List of Categories
+  </ng-template>
+  <ng-template [ngIf]="!(courseCategory.length>0)">
+      No Category Yet
+  </ng-template>
+

@@ -7,11 +7,19 @@ import { favouriteEventArgs } from './favourite/favourite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello-world';
+  title = 'Alor Sathi';
   pop={isFavourite:true,isTaken:false};
 
-  viewMode: string ="other";
+  task = {
+    title:"Introduction to Angular",
+    author:"Shahid",
+    assignee:{
+      name: "John Smith"
+    }
+  }
 
+  viewMode: string ="other";
+  canSave:boolean = false;
   
 
   onFavouriteChanged(eventArgs:favouriteEventArgs){
